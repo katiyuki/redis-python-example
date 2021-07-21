@@ -132,3 +132,8 @@ if __name__ == "__main__":
         consumer.join()
 
     print(f"consumers done")
+
+    # remove consumer group from redis
+    # r_conn.xgroup_destroy(STREAM_NAME, CONSUMER_GROUP_NAME)
+    # clean up everything! uncomment if you really want EVERYTHING to be erased
+    # r_conn.flushall()
