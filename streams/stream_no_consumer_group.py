@@ -42,7 +42,7 @@ def message_consumer():
         # last_id needs to change to the id of the last message processed by this consumer
         print(f"last_id={last_id}")
         # https://redis.io/commands/xread
-        task = r_conn.xread({STREAM_NAME: last_id}, count=1, block=20000)
+        task = r_conn.xread({STREAM_NAME: last_id}, count=1, block=5000)
         print(f"data from stream = {task}")
         # example of what to expect to get back from the stream
         # task[0][0] = stream name
