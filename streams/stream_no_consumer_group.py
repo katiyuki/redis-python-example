@@ -80,4 +80,7 @@ if __name__ == "__main__":
     consumer.join()
     print(f"consumer done")
 
+    # clean up everything! uncomment if you really want EVERYTHING to be erased
+    # r_conn.flushall()
+
 
